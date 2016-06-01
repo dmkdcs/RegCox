@@ -71,7 +71,7 @@ arc.lasso.mse <- function(train_data1, nfolds, lambda)
       
       s0 <- exp(-h0)
       
-      # find the prediction on the training data
+      # find the predictions on the training data
       ht <- -log(s0^(exp(xtest%*%as.matrix(beta))))
       
       # Martingale Residual calculation

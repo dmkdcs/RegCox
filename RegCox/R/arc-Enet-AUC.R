@@ -71,7 +71,7 @@ arc.enet.auc <- function(train_data1, nfolds, alpha, lambda)
       
       s0 <- exp(-h0)
       
-      # find the prediction on the training data
+      # find the predictions on the training data
       ht <- -log(s0^(exp(xtest%*%as.matrix(beta))))
       
       output <- concordance.index(x=ht, surv.time=ytest[,1], surv.event=ytest[,2], method="noether")

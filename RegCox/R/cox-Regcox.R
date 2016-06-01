@@ -4,7 +4,7 @@
 #' @param t Time variable used for risk set calculation
 #' @param regtype Type of regularization to apply {"Lasso", "Enet", "Lapnet", "Kernelnet", "Oscar", "Fear", "Cocktail"}
 #' @param nfolds No of folds for cross validation
-#' @param standardize Logical flag for standardizing x using z-score normalization. default=TRUE
+#' @param standardize Logical flag for standardizing x using z-score normalization. default = TRUE
 #' @param stdbeta Logical flag for standardizing beta using min-max normalization. default=TRUE. Must be true for "Fear" and "Cocktail"
 #' @param lambda1 Additional parameter for Oscar regularization
 #' @param lambda2 Additional parameter for Oscar regularization

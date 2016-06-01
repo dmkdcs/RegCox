@@ -5,7 +5,7 @@ eval <- function(x, y, t, beta, h0, s0, foldid, nfolds)
   y_size <- dim(x)[2]
   events <- sum(y[,2])
   
-  # find the prediction on the training data
+  # Find the prediction on the training data
   ht <- -log(s0^(exp(x%*%as.matrix(beta))))
   st <- s0^(exp(x%*%as.matrix(beta)))
   p <- as.list(ht)

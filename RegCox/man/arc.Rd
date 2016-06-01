@@ -4,7 +4,7 @@
 \alias{arc}
 \title{Active learning using regularized cox models}
 \usage{
-arc(filename, regtype, metric, nfolds, alpha, lambda)
+arc(filename, regtype, metric, nfolds, standardize = TRUE, alpha, lambda)
 }
 \arguments{
 \item{filename}{Input matrix. Each row is an observation vector.}
@@ -14,6 +14,8 @@ arc(filename, regtype, metric, nfolds, alpha, lambda)
 \item{metric}{Type of evaluation metric to fetch {"AUC", "MSE"}}
 
 \item{nfolds}{Number of folds for cross validation}
+
+\item{standardize}{Logical flag for standardizing x using z-score normalization. default = TRUE}
 
 \item{alpha}{ratio between L1 and Laplacian for "Lapnet", or between L1 and L2 for "Enet". Not needed for "Lasso". Value should be between 0 and 1}
 

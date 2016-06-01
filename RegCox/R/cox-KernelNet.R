@@ -30,10 +30,10 @@ h0 <- sum(sapply(1:length(unique_time), function(i){
 
 s0 <- exp(-h0)
 
-# fetch the evaluation metrics
+# Fetch the evaluation metrics
 eval_metrics <- eval(x, y, t, beta, h0, s0, foldid, nfolds)
 
-#Append the evaluation metrics to the Coxnet object and return
+# Append the evaluation metrics to the Coxnet object and return
 return(c(fit, s0=s0, unlist(eval_metrics)))
 
 }

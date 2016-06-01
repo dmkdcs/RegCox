@@ -1,7 +1,7 @@
 getLaplacian <- function(x, metric="LAPLACIAN")
 {
   
-  #RBF kernel calculation
+  # RBF kernel calculation
   S <- sapply(1:dim(x)[2], function(m){
     sapply(1:dim(x)[2], function(n){
       exp(-1*(sqrt(sum((x[,m]-x[,n])^2))/(2*.09))) }) })

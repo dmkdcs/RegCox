@@ -42,10 +42,10 @@ regcoxfista=function(delta, z, time, t, y_target, l1, l2, nfolds, stdbeta){
 	
 	s0 <- exp(-h0)
 	
-	# fetch the evaluation metrics
+	# Fetch the evaluation metrics
 	eval_metrics <- eval(z, y_target, t, beta, h0, s0, foldid, nfolds)
 	
-	#Append the evaluation metrics to the Coxnet object and return
+	# Append the evaluation metrics to the Coxnet object and return
 	return(c(list(Beta = beta), s0=s0, unlist(eval_metrics)))
 	
 }

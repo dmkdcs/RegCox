@@ -4,8 +4,9 @@
 \alias{regcox}
 \title{Learn a Cox model with regularization}
 \usage{
-regcox(x, y, t, regtype, nfolds, lambda1 = 0, lambda2 = 0, alpha = 0.5,
-  lambda = 0, tol = 0.001, itermax, weight = 1)
+regcox(x, y, t, regtype, nfolds, standardize = TRUE, stdbeta = TRUE,
+  lambda1 = 0, lambda2 = 0, alpha = 0.5, lambda = 0, tol = 0.001,
+  itermax, weight = 1)
 }
 \arguments{
 \item{x}{Input matrix. Each row is an observation vector.}
@@ -17,6 +18,10 @@ regcox(x, y, t, regtype, nfolds, lambda1 = 0, lambda2 = 0, alpha = 0.5,
 \item{regtype}{Type of regularization to apply {"Lasso", "Enet", "Lapnet", "Kernelnet", "Oscar", "Fear", "Cocktail"}}
 
 \item{nfolds}{No of folds for cross validation}
+
+\item{standardize}{Logical flag for standardizing x using z-score normalization. default = TRUE}
+
+\item{stdbeta}{Logical flag for standardizing beta using min-max normalization. default=TRUE. Must be true for "Fear" and "Cocktail"}
 
 \item{lambda1}{Additional parameter for Oscar regularization}
 

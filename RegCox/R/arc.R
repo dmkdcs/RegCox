@@ -3,7 +3,7 @@
 #' @param regtype Type of regularization to apply {"Lasso", "Enet", "Lapnet", "Kernelnet"}
 #' @param metric Type of evaluation metric to fetch {"AUC", "MSE"}
 #' @param nfolds Number of folds for cross validation
-#' @param standardize Logical flag for standardizing x using z-score normalization. default=TRUE
+#' @param standardize Logical flag for standardizing x using z-score normalization. default = TRUE
 #' @param alpha ratio between L1 and Laplacian for "Lapnet", or between L1 and L2 for "Enet". Not needed for "Lasso". Value should be between 0 and 1
 #' @param lambda a user supplied decreasing sequence. can range from 0.01 to 1
 #' @export
